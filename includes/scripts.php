@@ -7,6 +7,10 @@
 <!-- DataTables -->
 <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- ChartJS -->
+<script src="bower_components/chart.js/Chart.js"></script>
+<!-- ChartJS Horizontal Bar -->
+<script src="bower_components/chart.js/Chart.HorizontalBar.js"></script>
 <!-- SlimScroll -->
 <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -17,18 +21,18 @@
 <script>
   $(function () {
     $('#example1').DataTable()
-  	var bookTable = $('#booklist').DataTable({
-      'paging'      : true,
+    var bookTable = $('#booklist').DataTable({
+      'paging': true,
       'lengthChange': false,
-      'searching'   : true,
-      'ordering'    : true,
-      'info'        : false,
-      'autoWidth'   : false
+      'searching': true,
+      'ordering': true,
+      'info': false,
+      'autoWidth': false
     })
 
-    $('#searchBox').on('keyup', function(){
-    	bookTable.search(this.value).draw();
-	});
+    $('#searchBox').on('keyup', function () {
+      bookTable.search(this.value).draw();
+    });
 
   })
 </script>
